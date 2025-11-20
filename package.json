@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "start:prod": "NODE_ENV=production node index.js",
+    "start:dev": "NODE_ENV=development nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -26,10 +28,8 @@
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-<<<<<<< HEAD
-=======
     "helmet": "^8.1.0",
->>>>>>> 2fd27bd4bc8b367cdd85defedb030a44b10ac4be
+    "http-errors": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.20.0"
   }

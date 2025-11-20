@@ -7,7 +7,7 @@ const globalErrorHandler = require('./middlewares/globalErrorHandler');
 const cookieParser = require('cookie-parser');
 
 // Environment config
-const PORT = config.port || process.env.PORT || 10000;
+const PORT = config.port;
 
 // Connect to database
 connectDB().catch(err => {
@@ -24,6 +24,21 @@ app.use(helmet()); // For HTTP headers security
 app.get('/', (req, res) => {
     res.json({ message: 'Hello from the Agility AI server!' });
 });
+
+// Other Routes with error handling
+try {
+    console.log('Loading routes...');
+    app.use('/api/auth', require('./routes/authRoutes'));
+    console.log('Auth routes loaded');
+    
+    app.use('/api/papers', require('./routes/paperRoutes'));
+    console.log('Papers routes loaded');
+
+    console.log('All routes loaded successfully');
+} catch (error) {
+    console.error('Error loading routes:', error);
+    process.exit(1);
+}
 
 // Global Error Handler
 app.use(globalErrorHandler);
