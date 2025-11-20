@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+node_modules/
+dist/
+.env
+.DS_Store
+.vscode/
+coverage/
+npm-debug.log
+yarn-error.log
+.idea/
+*.log
+*.swp
+/build/
+/tmp/
+*.bak
+*.old
+*.tmp
+*.cache
+*.iml
+*.class
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.exe
+*.dll
+*.pdb
+*.out
+*.obj
+*.so
+*.dylib
+*.lib
+*.log.*
+=======
 node_modules
 .env
 .DS_Store
@@ -15,3 +49,4 @@ yarn-error.log
 *.sqlite
 *.sqlite3
 *.env
+>>>>>>> 2fd27bd4bc8b367cdd85defedb030a44b10ac4be
