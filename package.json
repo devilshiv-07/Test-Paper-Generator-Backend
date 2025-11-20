@@ -26,6 +26,10 @@
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+<<<<<<< HEAD
+=======
+    "helmet": "^8.1.0",
+>>>>>>> 2fd27bd4bc8b367cdd85defedb030a44b10ac4be
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.20.0"
   }

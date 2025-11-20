@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+<<<<<<< HEAD
+=======
+const helmet = require('helmet');
+>>>>>>> 2fd27bd4bc8b367cdd85defedb030a44b10ac4be
 const config = require('./config/config');
 const connectDB = require('./config/database');
 const globalErrorHandler = require('./middlewares/globalErrorHandler');
@@ -15,8 +19,14 @@ connectDB().catch(err => {
 });
 
 // Middleware
+<<<<<<< HEAD
 app.use(express.json());
 app.use(cookieParser());
+=======
+app.use(express.json()); // For parsing application/json
+app.use(cookieParser()); // For parsing cookies
+app.use(helmet()); // For HTTP headers security
+>>>>>>> 2fd27bd4bc8b367cdd85defedb030a44b10ac4be
 
 // Root Endpoint
 app.get('/', (req, res) => {
